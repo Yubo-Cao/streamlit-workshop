@@ -68,9 +68,9 @@ for group in tqdm(hg38_annot.groupby("transcript_id")):
 
 - You don't know web development (or don't have time to build a full-fledged web app).
 - Yet, you need to share the algorithm with your team or the world.
-  - Science fair
-  - Journal publication
-  - HackGwinnett, TSA, FBLA, etc.
+  - Science fair
+  - Journal publication
+  - HackGwinnett, TSA, FBLA, etc.
 
 
 ---
