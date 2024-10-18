@@ -17,6 +17,9 @@ importers:
       '@slidev/theme-seriph':
         specifier: latest
         version: 0.25.0
+      slidev-addon-qrcode:
+        specifier: ^1.0.2
+        version: 1.0.2
       vue:
         specifier: ^3.5.10
         version: 3.5.12(typescript@5.6.3)
@@ -2294,6 +2297,13 @@ packages:
     resolution: {integrity: sha512-uxFIHU0YlHYhDQtV4R9J6a52SLx28BCjT+4ieh7IGbgwVJWO+km431c4yRlREUAsAmt/uMjQUyQHNEPf0M39CA==}
     engines: {node: '>=6'}
 
+  qr-code-styling@1.8.1:
+    resolution: {integrity: sha512-Fn2vaLdFktgAvThRxAHuQ4Qj+8F63ZjX1ooQJ38S2jPr3R+p0fs8XbjQzAPYqQ350+FCgKXhXn/ckzX8sB0UTw==}
+    engines: {node: '>=18.18.0'}
+
+  qrcode-generator@1.4.4:
+    resolution: {integrity: sha512-HM7yY8O2ilqhmULxGMpcHSF1EhJJ9yBj8gvDEuZ6M+KGJ0YY2hKpnXvRD+hZPLrDVck3ExIGhmPtSdcjC+guuw==}
+
   queue-microtask@1.2.3:
     resolution: {integrity: sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==}
 
@@ -2438,6 +2448,10 @@ packages:
   slash@5.1.0:
     resolution: {integrity: sha512-ZA6oR3T/pEyuqwMgAKT0/hAv8oAXckzbkmR0UkUosQ+Mc4RxGoJkRmwHgHufaenlyAgE1Mxgpdcrf75y6XcnDg==}
     engines: {node: '>=14.16'}
+
+  slidev-addon-qrcode@1.0.2:
+    resolution: {integrity: sha512-vYjfu8KHnOaiijWaQFc5LaaglDIISGZ5Bx4m0RbmDlPiIZDseEoJX6O3Lxh4LaaCdo5JpMK/3o6CcNZtcTqpLg==}
+    engines: {slidev: '>=0.32.1'}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -5652,6 +5666,12 @@ snapshots:
 
   punycode.js@2.3.1: {}
 
+  qr-code-styling@1.8.1:
+    dependencies:
+      qrcode-generator: 1.4.4
+
+  qrcode-generator@1.4.4: {}
+
   queue-microtask@1.2.3: {}
 
   queue@6.0.2:
@@ -5799,6 +5819,10 @@ snapshots:
 
   slash@5.1.0:
     optional: true
+
+  slidev-addon-qrcode@1.0.2:
+    dependencies:
+      qr-code-styling: 1.8.1
 
   source-map-js@1.2.1: {}
 

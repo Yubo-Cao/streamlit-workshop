@@ -17,12 +17,26 @@ transition: slide-left
 mdc: true
 # take snapshot for each slide in the overview
 overviewSnapshots: true
+
+addons:
+    - slidev-addon-qrcode
 ---
 
 
 <h1 class="mx-auto !text-primary">
 StreamLit Workshop
 </h1>
+
+<div class="flex items-center justify-center">
+<QRCode
+    :width="128"
+    :height="128"
+    type="svg"
+    data="https://forms.gle/oEg292Cv9Hp1ivke6"
+    :margin="10"
+    :imageOptions="{ margin: 10 }"
+/>
+</div>
 
 <div class="max-w-xl mx-auto text-slate-600">
   Sharing StreamLit, a Python library that makes it easy to create and share machine learning and data science application
@@ -38,6 +52,23 @@ StreamLit Workshop
 <!--
 The last comment block of each slide will be treated as slide notes. It will be visible and editable in Presenter Mode along with the slide. [Read more in the docs](https://sli.dev/guide/syntax.html#notes)
 -->
+
+---
+transition: slide-left
+---
+
+# Attendance
+
+<div class="flex items-center justify-center h-full">
+<QRCode
+    :width="256"
+    :height="256"
+    type="svg"
+    data="https://forms.gle/oEg292Cv9Hp1ivke6"
+    :margin="10"
+    :imageOptions="{ margin: 10 }"
+/>
+</div>
 
 ---
 transition: slide-left
