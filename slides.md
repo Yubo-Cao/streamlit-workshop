@@ -555,7 +555,8 @@ def draw_bbox(image, result):
 
 ---
 level: 1
-layout: two-cols
+layout: image-right
+image: /images/st-example-2.png
 layout-class: gap-8
 ---
 
@@ -573,7 +574,48 @@ img_empty.image(img, caption="Labelled Image", use_column_width=True)
 
 - `empty` will only have one widget, hence, when `image` is called, the previous image will be replaced by the new image.
 
-::right::
+---
+level: 1
+---
+
+## Multipage App (Sidebar)
+
+- StreamLit provides a way to create a multipage app.
+- We can create a sidebar to navigate between pages.
+
+```py
+import streamlit as st
+
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", ["Home", "About"])
+
+if page == "Home":
+    st.title("Home")
+    st.write("Welcome to the home page!")
+elif page == "About":
+    st.title("About")
+    st.write("This is the about page.")
+```
+
+---
+level: 1
+layout: image-right
+image: /images/multi-example.png
+layout-class: gap-8
+---
+
+## Multipage App (Folders)
+
+```
+/pages/
+-- 1_🏠_about.py
+-- 2_🔍_ocr.py
+app.py
+```
+
+---
+level: 1
+---
 
 ## Limitations
 
